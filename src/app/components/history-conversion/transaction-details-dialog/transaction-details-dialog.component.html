@@ -1,0 +1,13 @@
+<h2 mat-dialog-title class="dialog-title">
+    <span class="coin-icon">💰</span>
+    Detalhes da Transação
+</h2>
+<div mat-dialog-content>
+    <p><strong>ID:</strong> {{ data.id }}</p>
+    <p><strong>Moeda:</strong> {{ data.fromCurrency }} ➜ {{ data.toCurrency }}</p>
+    <p><strong>Valor:</strong> R$ {{ data.toAmount | number:'1.2-2' }}</p>
+    <p><strong>Data/Hora:</strong> {{ data.dateTime | date:'short' }}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="closeDialog()" class="dialog-close-button">Fechar</button>
+</div>

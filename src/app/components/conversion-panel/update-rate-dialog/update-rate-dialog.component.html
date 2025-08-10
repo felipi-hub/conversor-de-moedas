@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>
+    <div class="dialog-title">
+        <span class="coin-icon">💰</span>
+        <span class="title-text">Atualizar Taxa de Câmbio</span>
+    </div>
+</h2>
+
+<mat-dialog-content>
+    <mat-label style="color: black;">Nova Taxa</mat-label>
+    <mat-form-field appearance="fill" style="width: 100%; border-radius:20px;">
+        <input matInput type="number" [(ngModel)]="newRate">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close style=" color: var(--primary-300);">Cancelar</button>
+    <button mat-raised-button class="dialog-close-button" (click)="confirm()">Salvar</button>
+</mat-dialog-actions>

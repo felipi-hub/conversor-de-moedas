@@ -1,0 +1,96 @@
+.table-container {
+    overflow-x: auto;
+    border: none;
+    background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 0.3));
+
+
+}
+
+.title-history {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    border: none;
+}
+
+table th,
+table td {
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    border: none;
+    background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 1.5));
+}
+
+table th {
+    color: var(--primary-300);
+}
+
+@media (max-width: 768px) {
+    table {
+        min-width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 6px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+}
+
+.value {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+
+mat-card {
+    overflow: hidden;
+    border: 1px solid rgba(58, 145, 188, 0.5);
+    background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 0.9));
+    margin: 10px auto;
+    padding: 16px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
+
+
+@media (max-width: 768px) {
+    mat-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    mat-card {
+        width: 90%;
+
+    }
+}
