@@ -23,5 +23,6 @@ Um projeto Angular moderno e responsivo para conversão de moedas fictícias ent
    ## 📸 Demonstração
 
 
-<img width="3286" height="1080" alt="image" src="https://github.com/user-attachments/assets/08674e97-634c-4f70-a8d3-11ce7980c171" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/db62d1d0-75fa-4bd1-929b-0b9cba0619d8" />
+
 
