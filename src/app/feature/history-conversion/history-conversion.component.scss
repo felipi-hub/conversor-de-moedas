@@ -1,8 +1,6 @@
 .table-container {
     overflow-x: auto;
-    border: none;
     background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 0.3));
-
 
 }
 
@@ -15,23 +13,24 @@
 table {
     width: 100%;
     min-width: 400px;
-    border-collapse: collapse;
     margin-top: 20px;
     table-layout: fixed;
-    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+
 }
 
 table th,
 table td {
-    color: #fff;
+    color: #020617;
     padding: 12px;
-    text-align: left;
-    border: none;
-    background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 1.5));
+    text-align: center;
 }
 
 table th {
     color: var(--primary-300);
+    background: #020617;
+
 }
 
 @media (max-width: 768px) {
@@ -65,14 +64,13 @@ table th {
     font-weight: bold;
 }
 
-
 mat-card {
     overflow: hidden;
     border: 1px solid rgba(58, 145, 188, 0.5);
     background-image: linear-gradient(to bottom right, #172554, rgba(10, 19, 39, 0.9));
-    margin: 10px auto;
-    padding: 16px;
-    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    width: 70%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -80,7 +78,6 @@ mat-card {
     align-items: center;
     border-radius: 16px;
 }
-
 
 @media (max-width: 768px) {
     mat-card {

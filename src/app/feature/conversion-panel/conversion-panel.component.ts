@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ElementRef, HostListener } from '@angular/core';
-
 import { MatDialog } from '@angular/material/dialog';
 import { ConversionDialogComponent } from '././conversion-dialog/conversion-dialog.component';
 import { ConversionHistoryService } from '../../shared/services/conversion-history.service';

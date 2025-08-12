@@ -5,13 +5,13 @@
                 <h2>Taxa de Câmbio Atual</h2>
                 <div class="rate-display">
                     <span class="label">1 Ouro Real =</span>
-                    <span class="rate-value" id="currentRate">{{ currentRate }}</span>
+                    <span class="rate-value" id="currentRate">{{ currentRate.toFixed(2) }}</span>
                     <span class="label">Tibar</span>
                 </div>
                 <p class="last-update">
                     Última atualização:
                     <span>
-                        {{ lastUpdate | date: 'shortTime' }}
+                        {{ lastUpdate | date: 'HH:mm' }}
                     </span>
                 </p>
             </div>
