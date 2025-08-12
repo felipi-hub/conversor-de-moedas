@@ -1,18 +1,19 @@
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { ConversionPanelComponent } from './components/conversion-panel/conversion-panel.component';
-import { HistoryConversionComponent } from './components/history-conversion/history-conversion.component';
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/conversao', pathMatch: 'full' },
-    { path: 'conversao', component: ConversionPanelComponent },
-    { path: 'historico', component: HistoryConversionComponent },
+    { path: '', redirectTo: 'conversao', pathMatch: 'full' },
+    {
+        path: 'conversao',
+        title: 'Conversão',
+        loadComponent: () =>
+            import('./feature/conversion-panel/conversion-panel.component')
+                .then(c => c.ConversionPanelComponent),
+    },
+    {
+        path: 'historico',
+        title: 'Histórico de Conversões',
+        loadComponent: () =>
+            import('./feature/history-conversion/history-conversion.component')
+                .then(c => c.HistoryConversionComponent),
+    },
 ];
-
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
-})
-
-export class AppRoutingModule { }
