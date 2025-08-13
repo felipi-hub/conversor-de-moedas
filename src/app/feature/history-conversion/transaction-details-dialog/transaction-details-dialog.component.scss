@@ -11,7 +11,6 @@
     margin: 5 auto;
 }
 
-/* Títulos */
 h2[mat-dialog-title],
 h2.mat-dialog-title {
     color: white;
@@ -31,7 +30,6 @@ h2.mat-dialog-title {
     font-size: 2rem;
     font-weight: 700;
     color: #ffd700;
-    /* cor dourada que remete a moeda */
     margin-bottom: 2rem;
     text-align: center;
     gap: 0.5rem;
@@ -44,7 +42,7 @@ h2.mat-dialog-title {
 }
 
 
-/* Conteúdo */
+
 mat-dialog-content p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
@@ -54,7 +52,7 @@ mat-dialog-content p {
     line-height: 1.6;
 }
 
-/* Ações/Botões */
+
 mat-dialog-actions {
     display: flex;
     justify-content: center;
@@ -82,8 +80,6 @@ mat-dialog-actions {
     transform: translateY(-2px);
 }
 
-
-/* Tablet (768px para baixo) */
 @media (max-width: 768px) {
     :host {
         padding: 1.5rem 2rem;
@@ -107,7 +103,6 @@ mat-dialog-actions {
     }
 }
 
-/* Celular (480px para baixo) */
 @media (max-width: 480px) {
     :host {
         padding: 1.25rem;
@@ -133,7 +128,6 @@ mat-dialog-actions {
     }
 }
 
-/* Pequenos celulares (360px para baixo) */
 @media (max-width: 360px) {
     :host {
         padding: 1rem;

@@ -3,7 +3,7 @@
     <h2 mat-dialog-title>Conversão Realizada</h2>
 </div>
 <mat-dialog-content>
-    <p>{{ data.fromAmount }} {{ data.fromCurrency }} = {{ data.toAmount }} {{ data.toCurrency }}</p>
+    <p>{{ data.fromAmount.toFixed(2)}} {{ data.fromCurrency }} = {{ data.toAmount }} {{ data.toCurrency }}</p>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close class="dialog-close-button">

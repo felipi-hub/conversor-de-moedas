@@ -10,6 +10,11 @@
     font-weight: 500;
 }
 
+
+.mat-input-element {
+    color: #fff;
+}
+
 table {
     width: 100%;
     min-width: 400px;
@@ -62,6 +67,14 @@ table th {
 .value {
     color: #2e7d32;
     font-weight: bold;
+}
+
+mat-paginator {
+    margin-top: 20px;
+    background: #020617;
+    color: var(--primary-300);
+    border-radius: 0 0 16px 16px;
+    width: 100%;
 }
 
 mat-card {

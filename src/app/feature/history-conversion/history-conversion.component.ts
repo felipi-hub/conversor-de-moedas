@@ -5,6 +5,11 @@ import { ConversionHistoryService } from '../../shared/services/conversion-histo
 import { MatDialog } from '@angular/material/dialog';
 import { TransactionDetailsDialogComponent } from './transaction-details-dialog/transaction-details-dialog.component';
 import { SharedModule } from '../../shared/modules/shared.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ViewChild, AfterViewInit } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 
@@ -12,23 +17,34 @@ import { SharedModule } from '../../shared/modules/shared.module';
   selector: 'app-history-conversion',
   standalone: true,
   imports: [DecimalPipe,
-    DatePipe, SharedModule],
+    DatePipe, SharedModule, MatPaginatorModule],
   templateUrl: './history-conversion.component.html',
   styleUrls: ['./history-conversion.component.scss']
 })
-export class HistoryConversionComponent implements OnInit {
+export class HistoryConversionComponent implements OnInit, AfterViewInit {
+
   transactions: Transaction[] = [];
   displayedColumns: string[] = ['id', 'currencies', 'valueConverted', 'dateTime', 'actions'];
+  dataSource = new MatTableDataSource<Transaction>([]);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
 
-  constructor(private conversionHistoryService: ConversionHistoryService, public dialog: MatDialog) { }
+
+  constructor(private conversionHistoryService: ConversionHistoryService,
+    public dialog: MatDialog, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    // Subscrição para obter as transações atualizadas
     this.conversionHistoryService.getTransactions().subscribe((transactions) => {
-      this.transactions = transactions;  // Atualiza as transações exibidas na tabela
+      this.transactions = transactions;
+      this.dataSource.data = transactions;
+
     });
   }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
   openDialog(transaction: any): void {
     const dialogRef = this.dialog.open(TransactionDetailsDialogComponent, {
       width: '800px',
@@ -37,7 +53,9 @@ export class HistoryConversionComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('O modal foi fechado');
+
     });
+
   }
 }
 

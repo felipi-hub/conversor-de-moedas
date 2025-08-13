@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SharedModule } from '../../modules/shared.module';
 
 @Component({
@@ -9,5 +9,6 @@ import { SharedModule } from '../../modules/shared.module';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+  @Input() customClass = '';
 
 }
