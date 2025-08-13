@@ -1,6 +1,11 @@
+<mat-card class="filter-card">
+    <mat-card-title class="title-history">Buscar por ID , Valor e Moeda</mat-card-title>
+    <label class="filter-label"></label>
+    <mat-form-field appearance="fill" class="full-width filter-field">
+        <input matInput type="text" placeholder="Digite para filtrar..." (keyup)="applyFilter($event)" />
+    </mat-form-field>
+</mat-card>
 <mat-card>
-    <mat-card-title class="title-history">Histórico de Transações</mat-card-title>
-
     <div class="table-container">
         <table mat-table [dataSource]="transactions" [dataSource]="dataSource" class="mat-elevation-z8">
             <ng-container matColumnDef="id">

@@ -39,11 +39,22 @@ export class HistoryConversionComponent implements OnInit, AfterViewInit {
       this.transactions = transactions;
       this.dataSource.data = transactions;
 
+      this.dataSource.filterPredicate = (data: Transaction, filter: string) => {
+        const dataStr = `${data.id} ${data.fromCurrency} ${data.toCurrency} ${data.toAmount}`;
+        return dataStr.toLowerCase().includes(filter.trim().toLowerCase());
+      };
+
     });
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+  applyFilter(event: Event): void {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+  }
+
 
   openDialog(transaction: any): void {
     const dialogRef = this.dialog.open(TransactionDetailsDialogComponent, {
