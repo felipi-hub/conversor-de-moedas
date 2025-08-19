@@ -23,8 +23,6 @@ table {
     margin-top: 20px;
     table-layout: fixed;
     border-collapse: collapse;
-    border-spacing: 0;
-
 }
 
 table th,
@@ -72,11 +70,14 @@ table th {
 }
 
 mat-paginator {
-    margin-top: 20px;
+    margin-top: 4px;
     background: #020617;
     color: var(--primary-300);
     border-radius: 0 0 16px 16px;
     width: 100%;
+    margin-bottom: 9px;
+    padding: 2px;
+
 }
 
 mat-card {

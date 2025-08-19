@@ -9,6 +9,6 @@ import { SharedModule } from '../../modules/shared.module';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() customClass = '';
+
 
 }
