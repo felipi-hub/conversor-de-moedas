@@ -2,7 +2,8 @@
     <mat-card-title class="title-history">Buscar por ID , Valor e Moeda</mat-card-title>
     <label class="filter-label"></label>
     <mat-form-field appearance="fill" class="full-width filter-field">
-        <input matInput type="text" placeholder="Digite para filtrar..." (keyup)="applyFilter($event)" />
+        <input matInput type="text" [formControl]="filterCtrl" placeholder="Filtro Por : ID, Moeda, Valor ."
+            (keyup)="applyFilter($event)" />
     </mat-form-field>
 </mat-card>
 <mat-card>
