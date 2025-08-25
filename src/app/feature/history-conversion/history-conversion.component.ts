@@ -70,22 +70,4 @@ export class HistoryConversionComponent implements OnInit, AfterViewInit {
   }
 }
 
-/*transactions: Transaction[] = [
-  {
-    id: 'TX12345',
-    fromCurrency: 'USD',
-    toCurrency: 'BRL',
-    fromAmount: 100,
-    valueConverted: 520.75,
-    dateTime: '2025-08-08T10:30:00'
-  },
-  {
-    id: 'TX12346',
-    fromCurrency: 'EUR',
-    toCurrency: 'USD',
-    fromAmount: 90,
-    valueConverted: 108.90,
-    dateTime: '2025-08-08T11:15:00'
-  },
-];*/
 
